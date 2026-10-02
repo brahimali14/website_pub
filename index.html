@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <!-- Favicon avec Emblème Officiel -->
+  <link rel="icon" type="image/png" href="assets/img/logo_emblem_transparent.png">
 
   <!-- Feuille de style principale -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -25,12 +25,7 @@
       
       <!-- Logo Officiel BRAHIM INFORMATIQUE -->
       <a href="#accueil" class="brand-logo" aria-label="BRAHIM INFORMATIQUE Accueil">
-        <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="44" height="44" rx="10" fill="#041F3D"/>
-          <path d="M12 9H24C28.4183 9 32 12.5817 32 17C32 20.0247 30.3204 22.657 27.8703 24.0185C30.8715 25.4386 33 28.4754 33 32C33 36.4183 29.4183 40 25 40H12V9Z" fill="#0585F2"/>
-          <path d="M18 14H24C25.6569 14 27 15.3431 27 17C27 18.6569 25.6569 20 24 20H18V14Z" fill="#FFFFFF"/>
-          <path d="M18 25H25C26.6569 25 28 26.3431 28 28C28 29.6569 26.6569 31 25 31H18V25Z" fill="#FFFFFF"/>
-        </svg>
+        <img src="assets/img/logo_emblem_transparent.png" alt="Emblème BRAHIM INFORMATIQUE" class="logo-img" width="40" height="40">
         <div class="brand-text">
           <span class="brand-title brand-name-latin">BRAHIM</span>
           <span class="brand-subtitle brand-name-latin">INFORMATIQUE</span>
@@ -46,14 +41,32 @@
         <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
       </nav>
 
-      <!-- Actions Header : Sélecteur de Langue FR | AR & Burger -->
+      <!-- Actions Header : Sélecteur de Langue FR | AR, Bouton Thème Jour/Nuit & Burger -->
       <div class="header-actions">
+        
+        <!-- Bouton Changement Thème (Dark / Light Mode) -->
+        <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Changer le thème" title="Activer le mode clair">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Sélecteur Bilingue FR | AR -->
         <div class="lang-switch" role="group" aria-label="Sélecteur de langue">
-          <button type="button" class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" id="lang-fr" class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
           <span class="lang-separator" aria-hidden="true">|</span>
-          <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
+          <button type="button" id="lang-ar" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
         </div>
 
+        <!-- Burger Toggle Mobile -->
         <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -525,6 +538,17 @@
                 <span dir="ltr" class="ltr-text" data-i18n="memberAliEmail">brrali14@gmail.com</span>
               </div>
             </div>
+
+            <!-- Hint visuel d'agrandissement -->
+            <div class="team-card-zoom-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span data-i18n="clickToEnlarge">Agrandir le profil</span>
+            </div>
           </article>
 
           <!-- Membre 2 : Brahim Ahmed -->
@@ -562,6 +586,17 @@
                 <span dir="ltr" class="ltr-text" data-i18n="memberAhmedEmail">a_brahim@esi.dz</span>
               </div>
             </div>
+
+            <!-- Hint visuel d'agrandissement -->
+            <div class="team-card-zoom-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span data-i18n="clickToEnlarge">Agrandir le profil</span>
+            </div>
           </article>
 
           <!-- Membre 3 : Brahim Mohamed -->
@@ -598,6 +633,17 @@
                 </svg>
                 <span dir="ltr" class="ltr-text" data-i18n="memberMohamedEmail">brmed14@gmail.com</span>
               </div>
+            </div>
+
+            <!-- Hint visuel d'agrandissement -->
+            <div class="team-card-zoom-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span data-i18n="clickToEnlarge">Agrandir le profil</span>
             </div>
           </article>
 
@@ -641,12 +687,7 @@
         <!-- Marque & Slogan -->
         <div class="footer-brand">
           <div class="brand-logo">
-            <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="44" height="44" rx="10" fill="#041F3D"/>
-              <path d="M12 9H24C28.4183 9 32 12.5817 32 17C32 20.0247 30.3204 22.657 27.8703 24.0185C30.8715 25.4386 33 28.4754 33 32C33 36.4183 29.4183 40 25 40H12V9Z" fill="#0585F2"/>
-              <path d="M18 14H24C25.6569 14 27 15.3431 27 17C27 18.6569 25.6569 20 24 20H18V14Z" fill="#FFFFFF"/>
-              <path d="M18 25H25C26.6569 25 28 26.3431 28 28C28 29.6569 26.6569 31 25 31H18V25Z" fill="#FFFFFF"/>
-            </svg>
+            <img src="assets/img/logo_emblem_transparent.png" alt="Logo BRAHIM INFORMATIQUE" class="logo-img" width="40" height="40">
             <div class="brand-text">
               <span class="brand-title brand-name-latin">BRAHIM</span>
               <span class="brand-subtitle brand-name-latin">INFORMATIQUE</span>
@@ -724,6 +765,30 @@
 
     </div>
   </footer>
+
+  <!-- ==================== MODALE DE ZOOM PROFIL ÉQUIPE ==================== -->
+  <div id="profile-modal" class="profile-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+    <div class="profile-modal-dialog">
+      <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Fermer la modale">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="modal-avatar-wrapper">
+        <img id="modal-avatar-img" src="assets/img/ali.jpg" alt="Portrait grand format" class="modal-avatar-img">
+      </div>
+      <h3 id="modal-name" class="modal-name">Brahim Ali</h3>
+      <p id="modal-role" class="modal-role-badge">Développement d'applications mobiles, de logiciels et de sites web</p>
+      <div class="modal-contact-details">
+        <div class="modal-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span id="modal-phone" dir="ltr" class="ltr-text">0550 67 32 06</span>
+        </div>
+        <div class="modal-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span id="modal-email" dir="ltr" class="ltr-text">brrali14@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts JS : Dictionnaire i18n puis Logique Principale -->
   <script src="assets/js/i18n.js"></script>

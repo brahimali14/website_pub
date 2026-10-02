@@ -142,7 +142,14 @@ const translations = {
     footerLocationLabel: "Localisation :",
     footerLocationValue: "Algérie",
     footerCopyright: "© 2026 BRAHIM INFORMATIQUE. Tous droits réservés.",
-    footerNotice: "Site officiel de présentation d'entreprise — Informations directes."
+    footerNotice: "Site officiel de présentation d'entreprise — Informations directes.",
+
+    // Thème & Modal
+    themeToggleDark: "Mode sombre",
+    themeToggleLight: "Mode clair",
+    modalClose: "Fermer",
+    clickToEnlarge: "Agrandir le profil",
+    modalProfileTitle: "Profil & Compétences"
   },
 
   ar: {
@@ -282,6 +289,13 @@ const translations = {
     footerLocationLabel: "الموقع :",
     footerLocationValue: "الجزائر",
     footerCopyright: "© 2026 BRAHIM INFORMATIQUE. جميع الحقوق محفوظة.",
-    footerNotice: "الموقع التعريفي الرسمي للمؤسسة — صفحة تقديم وعرض خدمات."
+    footerNotice: "الموقع التعريفي الرسمي للمؤسسة — صفحة تقديم وعرض خدمات.",
+
+    // Thème & Modal
+    themeToggleDark: "الوضع الليلي",
+    themeToggleLight: "الوضع النهاري",
+    modalClose: "إغلاق",
+    clickToEnlarge: "تكبير الملف الشخصي",
+    modalProfileTitle: "الملف الشخصي والخبرات"
   }
 };

@@ -209,5 +209,136 @@
     });
   });
 
+  // --- 7. Gestion du Thème (Dark / Light Mode) ---
+  const THEME_KEY = 'brahim_theme';
+  const themeToggleBtn = document.getElementById('theme-toggle');
+
+  const SUN_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+  const MOON_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+  function getSavedTheme() {
+    try {
+      const saved = localStorage.getItem(THEME_KEY);
+      if (saved === 'light' || saved === 'dark') {
+        return saved;
+      }
+    } catch (e) {
+      console.warn('LocalStorage non disponible pour le thème:', e);
+    }
+    return 'dark'; // Thème officiel par défaut
+  }
+
+  function setTheme(theme) {
+    htmlEl.setAttribute('data-theme', theme);
+
+    if (themeToggleBtn) {
+      if (theme === 'light') {
+        themeToggleBtn.innerHTML = MOON_ICON;
+        themeToggleBtn.setAttribute('title', 'Activer le mode sombre');
+      } else {
+        themeToggleBtn.innerHTML = SUN_ICON;
+        themeToggleBtn.setAttribute('title', 'Activer le mode clair');
+      }
+    }
+
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (e) {
+      console.warn('Impossible de sauvegarder le thème:', e);
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+      const current = htmlEl.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      setTheme(next);
+    });
+  }
+
+  // Initialisation du thème
+  setTheme(getSavedTheme());
+
+  // --- 8. Modale de Zoom des Profils de l'Équipe ---
+  const profileModal = document.getElementById('profile-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalAvatarImg = document.getElementById('modal-avatar-img');
+  const modalName = document.getElementById('modal-name');
+  const modalRole = document.getElementById('modal-role');
+  const modalPhone = document.getElementById('modal-phone');
+  const modalEmail = document.getElementById('modal-email');
+
+  function openProfileModal(card) {
+    if (!profileModal) return;
+
+    const avatarImg = card.querySelector('.team-avatar-img');
+    const nameEl = card.querySelector('.team-name');
+    const roleEl = card.querySelector('.team-role-text');
+    const phoneEl = card.querySelector('.team-contact-item:first-child .ltr-text');
+    const emailEl = card.querySelector('.team-contact-item:last-child .ltr-text');
+
+    if (modalAvatarImg && avatarImg) {
+      modalAvatarImg.src = avatarImg.currentSrc || avatarImg.src;
+      modalAvatarImg.alt = avatarImg.alt;
+    }
+    if (modalName && nameEl) {
+      modalName.textContent = nameEl.textContent;
+    }
+    if (modalRole && roleEl) {
+      modalRole.textContent = roleEl.textContent;
+    }
+    if (modalPhone && phoneEl) {
+      modalPhone.textContent = phoneEl.textContent;
+    }
+    if (modalEmail && emailEl) {
+      modalEmail.textContent = emailEl.textContent;
+    }
+
+    profileModal.classList.add('is-active');
+    bodyEl.style.overflow = 'hidden';
+    if (modalCloseBtn) modalCloseBtn.focus();
+  }
+
+  function closeProfileModal() {
+    if (!profileModal) return;
+    profileModal.classList.remove('is-active');
+    bodyEl.style.overflow = '';
+  }
+
+  document.querySelectorAll('.team-card').forEach(function (card) {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-haspopup', 'dialog');
+
+    card.addEventListener('click', function () {
+      openProfileModal(this);
+    });
+
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openProfileModal(this);
+      }
+    });
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeProfileModal);
+  }
+
+  if (profileModal) {
+    profileModal.addEventListener('click', function (e) {
+      if (e.target === profileModal) {
+        closeProfileModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && profileModal.classList.contains('is-active')) {
+        closeProfileModal();
+      }
+    });
+  }
+
   console.log('BRAHIM INFORMATIQUE — Application initialisée avec succès.');
 })();

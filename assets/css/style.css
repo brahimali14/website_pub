@@ -1612,3 +1612,476 @@ ul {
   outline: 2px solid var(--accent-blue);
   outline-offset: 3px;
 }
+
+/* ==========================================================================
+   NOUVELLES FONCTIONNALITÉS : THÈME JOUR (LIGHT MODE), LOGO & ZOOM PROFIL
+   ========================================================================== */
+
+/* Logo image */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(5, 133, 242, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover .logo-img {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* Bouton Dark / Light Mode */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(5, 133, 242, 0.2);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: scale(1.08);
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+/* Hint de zoom sur les cartes de l'équipe */
+.team-card {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.team-card:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+.team-card-zoom-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  padding-block-start: 0.85rem;
+  opacity: 0.85;
+  transition: var(--transition-smooth);
+  border-block-start: 1px dashed rgba(5, 133, 242, 0.15);
+  margin-block-start: 0.5rem;
+}
+
+.team-card:hover .team-card-zoom-hint {
+  opacity: 1;
+  color: #0366d6;
+  transform: translateY(-2px);
+}
+
+/* Modale Zoom Profil Équipe */
+.profile-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 10, 22, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.profile-modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.profile-modal-dialog {
+  background: var(--bg-dark-deep);
+  border: 1px solid rgba(5, 133, 242, 0.35);
+  border-radius: var(--radius-lg);
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75), 0 0 45px rgba(5, 133, 242, 0.25);
+  position: relative;
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.profile-modal-overlay.is-active .profile-modal-dialog {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.modal-close-btn:hover {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.modal-avatar-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-full);
+  border: 3px solid var(--accent-blue);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(5, 133, 242, 0.4);
+  margin-block-end: 1.25rem;
+  flex-shrink: 0;
+  background: #02172c;
+}
+
+.modal-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-block-end: 0.5rem;
+}
+
+.modal-role-badge {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  background: rgba(5, 133, 242, 0.12);
+  border: 1px solid rgba(5, 133, 242, 0.25);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-block-end: 1.5rem;
+  line-height: 1.6;
+}
+
+.modal-contact-details {
+  width: 100%;
+  background: rgba(0, 10, 22, 0.55);
+  border: 1px solid rgba(5, 133, 242, 0.18);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.modal-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  user-select: all;
+}
+
+.modal-contact-item svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   THÈME JOUR (LIGHT MODE / مظهر نهار)
+   ========================================================================== */
+[data-theme="light"] {
+  --bg-dark-base: #f8fafc;
+  --bg-dark-deep: #ffffff;
+  --bg-dark-surface: #edf3fa;
+  --bg-dark-footer: #021427;
+  --bg-light-base: #ffffff;
+  --bg-light-alt: #f1f5f9;
+  --bg-card: #ffffff;
+
+  --text-dark-title: #0f172a;
+  --text-dark-body: #334155;
+  --text-dark-muted: #64748b;
+  --text-light-title: #0f172a;
+  --text-light-body: #475569;
+  --text-light-secondary: #64748b;
+
+  --gradient-hero: radial-gradient(circle at 80% 20%, rgba(5, 133, 242, 0.12) 0%, transparent 60%);
+  --shadow-sm: 0 4px 18px rgba(0, 10, 22, 0.05);
+  --shadow-md: 0 10px 30px rgba(5, 133, 242, 0.1);
+  --shadow-lg: 0 20px 45px rgba(5, 133, 242, 0.15);
+}
+
+[data-theme="light"] body {
+  background-color: var(--bg-dark-base);
+  color: var(--text-dark-body);
+}
+
+/* Header Light */
+[data-theme="light"] .site-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-block-end: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .site-header.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .brand-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .nav-link {
+  color: #334155;
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+  color: var(--accent-blue);
+}
+
+[data-theme="light"] .lang-switch {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .lang-btn {
+  color: #475569;
+}
+
+[data-theme="light"] .lang-btn:hover {
+  color: #0f172a;
+}
+
+[data-theme="light"] .lang-btn.active {
+  background-color: #0366d6;
+  color: #ffffff;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #0f172a;
+}
+
+[data-theme="light"] .nav-toggle {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #0f172a;
+}
+
+[data-theme="light"] .nav-menu {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-block-end-color: var(--accent-blue);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .nav-menu .nav-link {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+
+[data-theme="light"] .nav-menu .nav-link.active {
+  background: rgba(5, 133, 242, 0.12);
+  border-color: rgba(5, 133, 242, 0.3);
+  color: var(--accent-blue);
+}
+
+/* Hero Light */
+[data-theme="light"] .hero-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .hero-subtitle {
+  color: #1e293b;
+}
+
+[data-theme="light"] .hero-desc {
+  color: #475569;
+}
+
+[data-theme="light"] .hero-info-card {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.2);
+  box-shadow: 0 8px 25px rgba(5, 133, 242, 0.08);
+}
+
+[data-theme="light"] .hero-info-text {
+  color: #1e293b;
+}
+
+/* Service Showcases Light */
+[data-theme="light"] .services-detailed-section {
+  background-color: #f8fafc;
+}
+
+[data-theme="light"] .service-showcase-row {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .service-showcase-row:hover {
+  border-color: rgba(5, 133, 242, 0.35);
+  box-shadow: 0 15px 40px rgba(5, 133, 242, 0.1);
+}
+
+[data-theme="light"] .showcase-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .showcase-desc {
+  color: #475569;
+}
+
+[data-theme="light"] .showcase-bullet-item {
+  color: #1e293b;
+}
+
+/* About Light */
+[data-theme="light"] .about-section {
+  background-color: #f1f5f9;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .about-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .about-text {
+  color: #334155;
+}
+
+[data-theme="light"] .about-pillar-card {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .about-pillar-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .about-pillar-desc {
+  color: #475569;
+}
+
+[data-theme="light"] .about-card-visual {
+  background: linear-gradient(145deg, #ffffff 0%, #edf4fc 100%);
+  border-color: rgba(5, 133, 242, 0.25);
+  box-shadow: 0 15px 40px rgba(5, 133, 242, 0.08);
+}
+
+[data-theme="light"] .about-visual-quote {
+  color: #0f172a;
+}
+
+/* Team Light */
+[data-theme="light"] .team-section {
+  background-color: #f8fafc;
+}
+
+[data-theme="light"] .team-card {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .team-card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 16px 40px rgba(5, 133, 242, 0.14);
+}
+
+/* Modal Light */
+[data-theme="light"] .profile-modal-dialog {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.25);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 0 35px rgba(5, 133, 242, 0.15);
+}
+
+[data-theme="light"] .modal-close-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #0f172a;
+}
+
+[data-theme="light"] .modal-close-btn:hover {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+
+[data-theme="light"] .modal-name {
+  color: #0f172a;
+}
+
+[data-theme="light"] .modal-role-badge {
+  color: #0f172a;
+  background: rgba(5, 133, 242, 0.08);
+  border-color: rgba(5, 133, 242, 0.2);
+}
+
+[data-theme="light"] .modal-contact-details {
+  background: #f8fafc;
+  border-color: rgba(5, 133, 242, 0.15);
+}
+
+[data-theme="light"] .modal-contact-item {
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   SUPPORT BILINGUE & ISOLATION LTR POUR CONTACTS & CHIFFRES
+   ========================================================================== */
+.ltr-text,
+[dir="ltr"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+[dir="rtl"] {
+  font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
