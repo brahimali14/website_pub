@@ -162,6 +162,7 @@ const translations = {
     footerNotice: "Site officiel de présentation d'entreprise — Informations directes.",
 
     // Thème & Modales
+    themeToggleText: "Thème sombre / clair",
     themeToggleDark: "Mode sombre",
     themeToggleLight: "Mode clair",
     modalClose: "Fermer",
@@ -329,6 +330,7 @@ const translations = {
     footerNotice: "الموقع التعريفي الرسمي للمؤسسة — صفحة تقديم وعرض خدمات.",
 
     // Thème & Modales
+    themeToggleText: "تغيير المظهر (ليلي / نهاري)",
     themeToggleDark: "الوضع الليلي",
     themeToggleLight: "الوضع النهاري",
     modalClose: "إغلاق",
