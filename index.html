@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BRAHIM INFORMATIQUE : développement d'applications mobiles, logiciels sur mesure, création de sites web, vidéosurveillance et matériel informatique en Algérie.">
+  <title data-i18n="pageTitle">BRAHIM INFORMATIQUE — Solutions Digitales & Technologiques</title>
+
+  <!-- Google Fonts : Plus Jakarta Sans (Latin) & Cairo (Arabe) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header id="main-header" class="site-header">
+    <div class="container header-container">
+      
+      <!-- Logo Officiel BRAHIM INFORMATIQUE -->
+      <a href="#accueil" class="brand-logo" aria-label="BRAHIM INFORMATIQUE Accueil">
+        <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="10" fill="#041F3D"/>
+          <path d="M12 9H24C28.4183 9 32 12.5817 32 17C32 20.0247 30.3204 22.657 27.8703 24.0185C30.8715 25.4386 33 28.4754 33 32C33 36.4183 29.4183 40 25 40H12V9Z" fill="#0585F2"/>
+          <path d="M18 14H24C25.6569 14 27 15.3431 27 17C27 18.6569 25.6569 20 24 20H18V14Z" fill="#FFFFFF"/>
+          <path d="M18 25H25C26.6569 25 28 26.3431 28 28C28 29.6569 26.6569 31 25 31H18V25Z" fill="#FFFFFF"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title brand-name-latin">BRAHIM</span>
+          <span class="brand-subtitle brand-name-latin">INFORMATIQUE</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navigation par Ancres Internes Uniquement -->
+      <nav id="nav-menu" class="nav-menu" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-link active" data-i18n="navHome">Accueil</a>
+        <a href="#services" class="nav-link" data-i18n="navServices">Nos services</a>
+        <a href="#a-propos" class="nav-link" data-i18n="navAbout">À propos</a>
+        <a href="#equipe" class="nav-link" data-i18n="navTeam">Notre équipe</a>
+        <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <!-- Actions Header : Sélecteur de Langue FR | AR & Burger -->
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Sélecteur de langue">
+          <button type="button" class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+          <span class="lang-separator" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
+        </div>
+
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== SECTION HERO ==================== -->
+    <section id="accueil" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <span class="hero-tag" data-i18n="heroTag">VOTRE PARTENAIRE TECHNOLOGIQUE</span>
+            <h1 class="hero-title">
+              <span class="brand-name-latin" data-i18n="heroTitlePrefix">BRAHIM</span>
+              <span class="hero-title-accent brand-name-latin" data-i18n="heroTitleAccent">INFORMATIQUE</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Des solutions sur mesure pour vos projets digitaux et technologiques.</p>
+            <p class="hero-desc" data-i18n="heroDescription">
+              Applications mobiles, logiciels, sites web, solutions informatiques, installation de caméras et vente de matériel informatique. Nous vous accompagnons de l'idée à la réalisation avec expertise et rigueur.
+            </p>
+
+            <!-- Information de service (aucun bouton d'action) -->
+            <div class="hero-info-card">
+              <div class="hero-info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="hero-info-text">
+                <span data-i18n="heroBadge">Votre projet, notre expertise !</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-visual-frame">
+              <img src="assets/img/hero.jpg" alt="Poste de développement BRAHIM INFORMATIQUE" class="hero-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="eager">
+              <div class="hero-badge-overlay">
+                <span data-i18n="heroBadge">Votre projet, notre expertise !</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION SERVICES : VUE D'ENSEMBLE ==================== -->
+    <section id="services" class="services-overview-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge" data-i18n="servicesOverviewBadge">NOS SERVICES</span>
+          <h2 class="section-title title-dark" data-i18n="servicesOverviewTitle">Des solutions complètes pour tous vos besoins</h2>
+          <p class="section-subtitle" data-i18n="servicesOverviewSubtitle">Une expertise polyvalente pour vous offrir des solutions fiables, modernes et adaptées.</p>
+        </div>
+
+        <!-- 6 Cartes Synthétiques -->
+        <div class="services-overview-grid">
+          
+          <!-- Carte 1 : Applications Mobiles -->
+          <article class="srv-card">
+            <div class="srv-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="srv-card-title" data-i18n="srvCard1Title">Applications Mobiles</h3>
+            <p class="srv-card-desc" data-i18n="srvCard1Desc">Des applications performantes et intuitives pour iOS et Android.</p>
+          </article>
+
+          <!-- Carte 2 : Logiciels -->
+          <article class="srv-card">
+            <div class="srv-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="srv-card-title" data-i18n="srvCard2Title">Logiciels</h3>
+            <p class="srv-card-desc" data-i18n="srvCard2Desc">Des logiciels sur mesure pour optimiser votre activité.</p>
+          </article>
+
+          <!-- Carte 3 : Sites Web -->
+          <article class="srv-card">
+            <div class="srv-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="srv-card-title" data-i18n="srvCard3Title">Sites Web</h3>
+            <p class="srv-card-desc" data-i18n="srvCard3Desc">Des sites modernes, rapides et bien référencés.</p>
+          </article>
+
+          <!-- Carte 4 : Sécurité & Caméras -->
+          <article class="srv-card">
+            <div class="srv-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="srv-card-title" data-i18n="srvCard4Title">Sécurité & Caméras</h3>
+            <p class="srv-card-desc" data-i18n="srvCard4Desc">Installation et configuration de systèmes de vidéosurveillance et de sécurité.</p>
+          </article>
+
+          <!-- Carte 5 : Matériel Informatique -->
+          <article class="srv-card">
+            <div class="srv-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="srv-card-title" data-i18n="srvCard5Title">Matériel Informatique</h3>
+            <p class="srv-card-desc" data-i18n="srvCard5Desc">Vente et installation de tout matériel informatique (PC, composants, accessoires).</p>
+          </article>
+
+          <!-- Carte 6 : Conseils & Support -->
+          <article class="srv-card">
+            <div class="srv-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="srv-card-title" data-i18n="srvCard6Title">Conseils & Support</h3>
+            <p class="srv-card-desc" data-i18n="srvCard6Desc">Un accompagnement personnalisé à chaque étape de votre projet.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION SERVICES : VITRINE DÉTAILLÉE (6 BLOCS) ==================== -->
+    <section class="services-detailed-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge" data-i18n="servicesDetailBadge">DOMAINES D'INTERVENTION</span>
+          <h2 class="section-title title-light" data-i18n="servicesDetailTitle">Notre savoir-faire en détail</h2>
+        </div>
+
+        <div class="service-showcases">
+
+          <!-- 1. Applications Mobiles -->
+          <article class="service-showcase-row">
+            <div class="showcase-content">
+              <span class="showcase-tag" data-i18n="detail1Tag">APPLICATIONS MOBILES</span>
+              <h3 class="showcase-title" data-i18n="detail1Title">Applications Mobiles iOS & Android</h3>
+              <p class="showcase-desc" data-i18n="detail1Desc">Des applications performantes et intuitives pour iOS et Android.</p>
+              <ul class="showcase-bullets">
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail1Bullet1">Applications sur mesure</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail1Bullet2">Interfaces modernes et ergonomiques</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail1Bullet3">Mise à jour et maintenance</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <img src="assets/img/mobile.jpg" alt="Applications mobiles iOS et Android" class="showcase-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 2. Logiciels (Inversé) -->
+          <article class="service-showcase-row row-reversed">
+            <div class="showcase-content">
+              <span class="showcase-tag" data-i18n="detail2Tag">LOGICIELS SUR MESURE</span>
+              <h3 class="showcase-title" data-i18n="detail2Title">Logiciels de Gestion & Automatisation</h3>
+              <p class="showcase-desc" data-i18n="detail2Desc">Des logiciels sur mesure pour optimiser votre activité.</p>
+              <ul class="showcase-bullets">
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail2Bullet1">Logiciels de gestion</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail2Bullet1">Automatisation des processus</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail2Bullet3">Solutions personnalisées</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <img src="assets/img/logiciels.jpg" alt="Logiciels sur mesure et dashboards" class="showcase-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 3. Sites Web -->
+          <article class="service-showcase-row">
+            <div class="showcase-content">
+              <span class="showcase-tag" data-i18n="detail3Tag">SITES WEB</span>
+              <h3 class="showcase-title" data-i18n="detail3Title">Sites Web Modernes & Référencement</h3>
+              <p class="showcase-desc" data-i18n="detail3Desc">Des sites modernes, rapides et bien référencés.</p>
+              <ul class="showcase-bullets">
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail3Bullet1">Sites vitrines & e-commerce</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail3Bullet2">Design responsive</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail3Bullet3">Référencement SEO</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <img src="assets/img/web.jpg" alt="Création de sites web responsive" class="showcase-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 4. Sécurité & Caméras (Inversé) -->
+          <article class="service-showcase-row row-reversed">
+            <div class="showcase-content">
+              <span class="showcase-tag" data-i18n="detail4Tag">SÉCURITÉ & CAMÉRAS</span>
+              <h3 class="showcase-title" data-i18n="detail4Title">Sécurité & Systèmes de Vidéosurveillance</h3>
+              <p class="showcase-desc" data-i18n="detail4Desc">Protégez vos locaux avec des solutions de vidéosurveillance fiables et performantes.</p>
+              <ul class="showcase-bullets">
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail4Bullet1">Installation de caméras HD</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail4Bullet2">Accès à distance (mobile/PC)</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail4Bullet3">Maintenance et assistance</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <img src="assets/img/cameras.jpg" alt="Systèmes de caméras de surveillance" class="showcase-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 5. Matériel Informatique -->
+          <article class="service-showcase-row">
+            <div class="showcase-content">
+              <span class="showcase-tag" data-i18n="detail5Tag">MATÉRIEL INFORMATIQUE</span>
+              <h3 class="showcase-title" data-i18n="detail5Title">Vente & Installation de Matériel Informatique</h3>
+              <p class="showcase-desc" data-i18n="detail5Desc">Vente et installation de tout le matériel informatique.</p>
+              <ul class="showcase-bullets">
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail5Bullet1">PC & ordinateurs portables</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail5Bullet2">Composants (processeurs, cartes graphiques...)</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail5Bullet3">Périphériques et accessoires</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <img src="assets/img/materiel.jpg" alt="Vente de matériel et ordinateurs" class="showcase-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 6. Conseils & Support (Inversé) -->
+          <article class="service-showcase-row row-reversed">
+            <div class="showcase-content">
+              <span class="showcase-tag" data-i18n="detail6Tag">CONSEILS & SUPPORT</span>
+              <h3 class="showcase-title" data-i18n="detail6Title">Conseils Stratégiques & Support Technique</h3>
+              <p class="showcase-desc" data-i18n="detail6Desc">Un accompagnement personnalisé et une assistance technique réactive à chaque étape.</p>
+              <ul class="showcase-bullets">
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail6Bullet1">Audit informatique et recommandations technologiques sur mesure</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail6Bullet2">Assistance technique réactive et résolution des incidents</span>
+                </li>
+                <li class="showcase-bullet-item">
+                  <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  <span data-i18n="detail6Bullet3">Maintenance préventive et sécurisation des postes de travail</span>
+                </li>
+              </ul>
+            </div>
+            <div class="showcase-visual">
+              <img src="assets/img/support.jpg" alt="Conseil informatique et assistance technique" class="showcase-img" data-fallback="assets/img/fallback_image.svg" onerror="handleImgError(this)" loading="lazy">
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION À PROPOS ==================== -->
+    <section id="a-propos" class="about-section section-padding">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-content">
+            <span class="section-badge" data-i18n="aboutBadge">À PROPOS DE NOUS</span>
+            <h2 class="section-title title-light" data-i18n="aboutTitle">Une équipe passionnée par la technologie</h2>
+            <p class="about-text" data-i18n="aboutDesc">
+              BRAHIM INFORMATIQUE est une entreprise spécialisée dans les solutions informatiques et digitales. Nous mettons notre expertise et notre savoir-faire au service de vos projets, avec un seul objectif : votre satisfaction.
+            </p>
+
+            <div class="about-pillars">
+              
+              <div class="about-pillar-card">
+                <div class="about-pillar-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="about-pillar-title" data-i18n="aboutPillar1Title">Professionnalisme & sérieux</h3>
+                  <p class="about-pillar-desc" data-i18n="aboutPillar1Desc">Un travail soigné conforme aux standards de l'industrie.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-card">
+                <div class="about-pillar-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="about-pillar-title" data-i18n="aboutPillar2Title">Solutions adaptées</h3>
+                  <p class="about-pillar-desc" data-i18n="aboutPillar2Desc">Une écoute attentive pour concevoir des réponses sur mesure.</p>
+                </div>
+              </div>
+
+              <div class="about-pillar-card">
+                <div class="about-pillar-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="about-pillar-title" data-i18n="aboutPillar3Title">Support réactif</h3>
+                  <p class="about-pillar-desc" data-i18n="aboutPillar3Desc">Une disponibilité exemplaire pour vous accompagner dans la durée.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="about-visual-side">
+            <div class="about-card-visual">
+              <svg class="about-visual-logo" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="44" height="44" rx="10" fill="#0585F2" fill-opacity="0.15"/>
+                <path d="M12 9H24C28.4183 9 32 12.5817 32 17C32 20.0247 30.3204 22.657 27.8703 24.0185C30.8715 25.4386 33 28.4754 33 32C33 36.4183 29.4183 40 25 40H12V9Z" fill="#0585F2"/>
+                <path d="M18 14H24C25.6569 14 27 15.3431 27 17C27 18.6569 25.6569 20 24 20H18V14Z" fill="#FFFFFF"/>
+                <path d="M18 25H25C26.6569 25 28 26.3431 28 28C28 29.6569 26.6569 31 25 31H18V25Z" fill="#FFFFFF"/>
+              </svg>
+              <p class="about-visual-quote brand-name-latin">BRAHIM INFORMATIQUE</p>
+              <div class="about-visual-badge" data-i18n="aboutBadgeText">Innovation • Qualité • Confiance</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION NOTRE ÉQUIPE ==================== -->
+    <section id="equipe" class="team-section section-padding">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge" data-i18n="teamBadge">NOTRE ÉQUIPE</span>
+          <h2 class="section-title title-dark" data-i18n="teamTitle">Une vision d'excellence à votre service</h2>
+          <p class="section-subtitle" data-i18n="teamSubtitle">Des compétences complémentaires et un engagement absolu pour la réussite de vos projets.</p>
+        </div>
+
+        <div class="team-grid">
+
+          <!-- Membre 1 : Brahim Ali -->
+          <article class="team-card">
+            <div class="team-card-header">
+              <div class="team-avatar-wrapper">
+                <img src="assets/img/ali.jpg" alt="Portrait de Brahim Ali" class="team-avatar-img" data-fallback="assets/img/avatar_ali.svg" onerror="handleImgError(this)" loading="lazy">
+              </div>
+              <div class="team-info-name">
+                <h3 class="team-name" data-i18n="memberAliName">Brahim Ali</h3>
+              </div>
+            </div>
+            
+            <div class="team-role-box">
+              <svg class="team-role-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <p class="team-role-text" data-i18n="memberAliRole">Développement d'applications mobiles, de logiciels et de sites web</p>
+            </div>
+
+            <!-- Coordonnées en Texte Simple LTR (Non Cliquable) -->
+            <div class="team-contact-list">
+              <div class="team-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span dir="ltr" class="ltr-text" data-i18n="memberAliPhone">0550 67 32 06</span>
+              </div>
+              <div class="team-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span dir="ltr" class="ltr-text" data-i18n="memberAliEmail">brrali14@gmail.com</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Membre 2 : Brahim Ahmed -->
+          <article class="team-card">
+            <div class="team-card-header">
+              <div class="team-avatar-wrapper">
+                <img src="assets/img/ahmed.jpg" alt="Portrait de Brahim Ahmed" class="team-avatar-img" data-fallback="assets/img/avatar_ahmed.svg" onerror="handleImgError(this)" loading="lazy">
+              </div>
+              <div class="team-info-name">
+                <h3 class="team-name" data-i18n="memberAhmedName">Brahim Ahmed</h3>
+              </div>
+            </div>
+            
+            <div class="team-role-box">
+              <svg class="team-role-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <p class="team-role-text" data-i18n="memberAhmedRole">Développement de logiciels, installation de caméras, matériel informatique et réseaux</p>
+            </div>
+
+            <!-- Coordonnées en Texte Simple LTR (Non Cliquable) -->
+            <div class="team-contact-list">
+              <div class="team-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span dir="ltr" class="ltr-text" data-i18n="memberAhmedPhone">0550 67 32 07</span>
+              </div>
+              <div class="team-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span dir="ltr" class="ltr-text" data-i18n="memberAhmedEmail">a_brahim@esi.dz</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Membre 3 : Brahim Mohamed -->
+          <article class="team-card">
+            <div class="team-card-header">
+              <div class="team-avatar-wrapper">
+                <img src="assets/img/mohamed.jpg" alt="Portrait de Brahim Mohamed" class="team-avatar-img" data-fallback="assets/img/avatar_mohamed.svg" onerror="handleImgError(this)" loading="lazy">
+              </div>
+              <div class="team-info-name">
+                <h3 class="team-name" data-i18n="memberMohamedName">Brahim Mohamed</h3>
+              </div>
+            </div>
+            
+            <div class="team-role-box">
+              <svg class="team-role-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <p class="team-role-text" data-i18n="memberMohamedRole">Développement de logiciels et de sites web, installation de caméras, matériel informatique et réseaux</p>
+            </div>
+
+            <!-- Coordonnées en Texte Simple LTR (Non Cliquable) -->
+            <div class="team-contact-list">
+              <div class="team-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span dir="ltr" class="ltr-text" data-i18n="memberMohamedPhone">0553 18 40 96</span>
+              </div>
+              <div class="team-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span dir="ltr" class="ltr-text" data-i18n="memberMohamedEmail">brmed14@gmail.com</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BANNIÈRE INFORMATIVE PROJET ==================== -->
+    <section class="project-banner-section">
+      <div class="container">
+        <div class="project-banner-card">
+          <div class="banner-content">
+            <div class="banner-icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </div>
+            <div class="banner-text-block">
+              <h2 class="banner-title" data-i18n="bannerTitle">Vous avez un projet ?</h2>
+              <p class="banner-desc" data-i18n="bannerDesc">
+                Pour toute demande de renseignements ou pour échanger sur vos besoins technologiques, vous pouvez nous joindre via les coordonnées ci-dessous.
+              </p>
+            </div>
+          </div>
+          <div class="banner-info-badge" data-i18n="bannerInfoNotice">
+            Coordonnées directes et informations de contact
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER & COORDONNÉES ==================== -->
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Marque & Slogan -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <svg class="logo-icon-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="44" height="44" rx="10" fill="#041F3D"/>
+              <path d="M12 9H24C28.4183 9 32 12.5817 32 17C32 20.0247 30.3204 22.657 27.8703 24.0185C30.8715 25.4386 33 28.4754 33 32C33 36.4183 29.4183 40 25 40H12V9Z" fill="#0585F2"/>
+              <path d="M18 14H24C25.6569 14 27 15.3431 27 17C27 18.6569 25.6569 20 24 20H18V14Z" fill="#FFFFFF"/>
+              <path d="M18 25H25C26.6569 25 28 26.3431 28 28C28 29.6569 26.6569 31 25 31H18V25Z" fill="#FFFFFF"/>
+            </svg>
+            <div class="brand-text">
+              <span class="brand-title brand-name-latin">BRAHIM</span>
+              <span class="brand-subtitle brand-name-latin">INFORMATIQUE</span>
+            </div>
+          </div>
+          <p class="footer-baseline" data-i18n="footerBrandBaseline">Des solutions aujourd'hui, pour un meilleur demain.</p>
+        </div>
+
+        <!-- Informations de Contact en Texte Brut (Non Cliquable) -->
+        <div class="footer-contact-details">
+          <h3 class="footer-contact-title" data-i18n="footerContactHeading">Coordonnées de l'entreprise</h3>
+          
+          <!-- Téléphones -->
+          <div class="footer-info-row">
+            <svg class="footer-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <div class="footer-info-content">
+              <span class="footer-info-label" data-i18n="footerPhonesLabel">Téléphones :</span>
+              <div class="footer-numbers-list">
+                <span dir="ltr" class="ltr-text">0550 67 32 06</span>
+                <span class="footer-item-sep">/</span>
+                <span dir="ltr" class="ltr-text">0550 67 32 07</span>
+                <span class="footer-item-sep">/</span>
+                <span dir="ltr" class="ltr-text">0553 18 40 96</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emails -->
+          <div class="footer-info-row">
+            <svg class="footer-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div class="footer-info-content">
+              <span class="footer-info-label" data-i18n="footerEmailsLabel">Emails :</span>
+              <div class="footer-emails-list">
+                <span dir="ltr" class="ltr-text">brrali14@gmail.com</span>
+                <span class="footer-item-sep">/</span>
+                <span dir="ltr" class="ltr-text">a_brahim@esi.dz</span>
+                <span class="footer-item-sep">/</span>
+                <span dir="ltr" class="ltr-text">brmed14@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Localisation -->
+          <div class="footer-info-row">
+            <svg class="footer-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div class="footer-info-content">
+              <span class="footer-info-label" data-i18n="footerLocationLabel">Localisation :</span>
+              <span class="footer-location-text" data-i18n="footerLocationValue">Algérie</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Barre de Copyright & Navigation interne -->
+      <div class="footer-bottom">
+        <p class="footer-copyright" data-i18n="footerCopyright">© 2026 BRAHIM INFORMATIQUE. Tous droits réservés.</p>
+        <div class="footer-nav-links">
+          <a href="#accueil" data-i18n="navHome">Accueil</a>
+          <a href="#services" data-i18n="navServices">Nos services</a>
+          <a href="#a-propos" data-i18n="navAbout">À propos</a>
+          <a href="#equipe" data-i18n="navTeam">Notre équipe</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts JS : Dictionnaire i18n puis Logique Principale -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

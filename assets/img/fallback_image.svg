@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="fallbackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000A16"/>
+      <stop offset="50%" stop-color="#021A38"/>
+      <stop offset="100%" stop-color="#043268"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#fallbackGrad)"/>
+  <circle cx="400" cy="200" r="60" fill="rgba(5, 133, 242, 0.15)" stroke="#0585F2" stroke-width="2"/>
+  <path d="M375 200 L395 220 L430 185" fill="none" stroke="#0585F2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="290" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">BRAHIM INFORMATIQUE</text>
+  <text x="400" y="320" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" fill="#94A3B8" text-anchor="middle">SOLUTIONS TECHNOLOGIQUES</text>
+</svg>
