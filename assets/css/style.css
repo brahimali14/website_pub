@@ -653,6 +653,10 @@ ul {
   transform: translateX(-4px);
 }
 
+[dir="rtl"] .srv-card-action svg {
+  transform: rotate(180deg);
+}
+
 .srv-card-icon {
   width: 64px;
   height: 64px;
