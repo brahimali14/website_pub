@@ -250,6 +250,14 @@
 
   function setTheme(theme) {
     htmlEl.setAttribute('data-theme', theme);
+    htmlEl.classList.toggle('theme-light', theme === 'light');
+    try { htmlEl.style.colorScheme = theme; } catch (e) {}
+
+    if (bodyEl) {
+      bodyEl.setAttribute('data-theme', theme);
+      bodyEl.classList.toggle('theme-light', theme === 'light');
+    }
+
     const lang = htmlEl.getAttribute('lang') || 'fr';
     const dict = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang] : (typeof translations !== 'undefined' ? translations.fr : null);
 
@@ -267,6 +275,11 @@
       }
     }
 
+    const metaTheme = document.getElementById('meta-theme-color');
+    if (metaTheme) {
+      metaTheme.setAttribute('content', theme === 'light' ? '#f8fafc' : '#000a16');
+    }
+
     try {
       localStorage.setItem(THEME_KEY, theme);
     } catch (e) {
@@ -274,15 +287,21 @@
     }
   }
 
-  function toggleThemeAction(e) {
-    if (e) e.preventDefault();
+  let lastToggleTime = 0;
+  window.toggleTheme = function (e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation();
+    const now = Date.now();
+    if (now - lastToggleTime < 350) return;
+    lastToggleTime = now;
+
     const current = htmlEl.getAttribute('data-theme') || 'dark';
     const next = current === 'dark' ? 'light' : 'dark';
     setTheme(next);
-  }
+  };
 
   if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', toggleThemeAction);
+    themeToggleBtn.addEventListener('click', window.toggleTheme);
   }
 
   // Initialisation du thème

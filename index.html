@@ -14,8 +14,25 @@
   <!-- Favicon avec Emblème Officiel -->
   <link rel="icon" type="image/png" href="assets/img/logo_emblem_transparent.png">
 
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" id="meta-theme-color" content="#000a16">
+
+  <!-- Initialisation Thème Immédiate (Anti-Flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('brahim_theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+        document.documentElement.style.colorScheme = saved;
+        if (saved === 'light') {
+          document.documentElement.classList.add('theme-light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Feuille de style principale -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.2">
 </head>
 <body>
 
@@ -45,7 +62,7 @@
       <div class="header-actions">
         
         <!-- Bouton Changement Thème (Dark / Light Mode) -->
-        <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Changer le thème" title="Activer le mode clair" style="width: 38px; height: 38px; min-width: 38px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;">
+        <button type="button" id="theme-toggle" class="theme-toggle-btn" aria-label="Changer le thème" title="Activer le mode clair" style="width: 38px; height: 38px; min-width: 38px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -938,7 +955,7 @@
   </div>
 
   <!-- Scripts JS : Dictionnaire i18n puis Logique Principale -->
-  <script src="assets/js/i18n.js?v=3.0"></script>
-  <script src="assets/js/main.js?v=3.0"></script>
+  <script src="assets/js/i18n.js?v=3.1"></script>
+  <script src="assets/js/main.js?v=3.1"></script>
 </body>
 </html>

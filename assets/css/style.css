@@ -45,6 +45,12 @@
   --shadow-sm: 0 4px 15px rgba(2, 23, 44, 0.04);
   --shadow-md: 0 10px 30px rgba(2, 23, 44, 0.07);
   --shadow-lg: 0 20px 45px rgba(5, 133, 242, 0.12);
+
+  /* Thème & Header */
+  color-scheme: dark;
+  --header-bg: rgba(0, 10, 22, 0.82);
+  --header-bg-scrolled: rgba(0, 10, 22, 0.94);
+  --header-border: rgba(255, 255, 255, 0.06);
 }
 
 /* --- 2. Reset & Règles de Base --- */
@@ -190,15 +196,15 @@ ul {
   width: 100%;
   height: var(--header-height);
   z-index: 1000;
-  background-color: rgba(0, 10, 22, 0.82);
+  background-color: var(--header-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-block-end: 1px solid rgba(255, 255, 255, 0.06);
+  border-block-end: 1px solid var(--header-border);
   transition: var(--transition-smooth);
 }
 
 .site-header.header-scrolled {
-  background-color: rgba(0, 10, 22, 0.94);
+  background-color: var(--header-bg-scrolled);
   border-block-end: 1px solid rgba(5, 133, 242, 0.2);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
@@ -2232,7 +2238,16 @@ ul {
 /* ==========================================================================
    THÈME JOUR (LIGHT MODE / مظهر نهار)
    ========================================================================== */
-[data-theme="light"] {
+:root[data-theme="light"],
+html[data-theme="light"],
+body[data-theme="light"],
+[data-theme="light"],
+.theme-light {
+  color-scheme: light;
+  --header-bg: rgba(255, 255, 255, 0.94);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.98);
+  --header-border: rgba(0, 0, 0, 0.08);
+
   --bg-dark-base: #f8fafc;
   --bg-dark-deep: #ffffff;
   --bg-dark-surface: #edf3fa;
@@ -2254,27 +2269,32 @@ ul {
   --shadow-lg: 0 20px 45px rgba(5, 133, 242, 0.15);
 }
 
-[data-theme="light"] body {
+[data-theme="light"] body,
+body.theme-light {
   background-color: var(--bg-dark-base);
   color: var(--text-dark-body);
 }
 
 /* Header Light */
-[data-theme="light"] .site-header {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-block-end: 1px solid rgba(0, 0, 0, 0.08);
+[data-theme="light"] .site-header,
+.theme-light .site-header {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-block-end: 1px solid rgba(0, 0, 0, 0.08) !important;
 }
 
-[data-theme="light"] .site-header.header-scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
+[data-theme="light"] .site-header.header-scrolled,
+.theme-light .site-header.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
-[data-theme="light"] .brand-title {
-  color: #0f172a;
+[data-theme="light"] .brand-title,
+.theme-light .brand-title {
+  color: #0f172a !important;
 }
 
-[data-theme="light"] .nav-link {
+[data-theme="light"] .nav-link,
+.theme-light .nav-link {
   color: #334155;
 }
 
