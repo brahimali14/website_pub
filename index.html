@@ -124,6 +124,43 @@
       </div>
     </section>
 
+    <!-- ==================== CHIFFRES CLÉS & EXPÉRIENCE ==================== -->
+    <div class="stats-strip" aria-label="Chiffres clés et expérience de BRAHIM INFORMATIQUE">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-i18n="statExpNumber">17+</span>
+              <span class="stat-suffix" data-i18n="statExpSuffix">Ans</span>
+            </div>
+            <p class="stat-label" data-i18n="statExpLabel">D'expertise & ingénierie en développement logiciel</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-i18n="statClientsNumber">+50</span>
+            </div>
+            <p class="stat-label" data-i18n="statClientsLabel">Institutions nationales et organismes gouvernementaux</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-i18n="statQualityNumber">100%</span>
+            </div>
+            <p class="stat-label" data-i18n="statQualityLabel">Rigueur, fiabilité et conformité éprouvée</p>
+          </div>
+          <div class="stat-card stat-location-card">
+            <div class="stat-number-wrapper stat-loc-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-loc-icon" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span class="stat-loc-name" data-i18n="statLocationName">Tiaret, Algérie</span>
+            </div>
+            <p class="stat-label" data-i18n="statLocationLabel">Siège principal avec rayonnement national</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ==================== SECTION SERVICES : VUE D'ENSEMBLE ==================== -->
     <section id="services" class="services-overview-section section-padding">
       <div class="container">
@@ -134,11 +171,11 @@
           <p class="section-subtitle" data-i18n="servicesOverviewSubtitle">Une expertise polyvalente pour vous offrir des solutions fiables, modernes et adaptées.</p>
         </div>
 
-        <!-- 6 Cartes Synthétiques -->
+        <!-- 6 Cartes Synthétiques Interactives -->
         <div class="services-overview-grid">
           
           <!-- Carte 1 : Applications Mobiles -->
-          <article class="srv-card">
+          <article class="srv-card" data-service-id="1" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="srv-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
@@ -147,10 +184,14 @@
             </div>
             <h3 class="srv-card-title" data-i18n="srvCard1Title">Applications Mobiles</h3>
             <p class="srv-card-desc" data-i18n="srvCard1Desc">Des applications performantes et intuitives pour iOS et Android.</p>
+            <div class="srv-card-action">
+              <span data-i18n="clickToDiscover">Découvrir cette expertise</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </article>
 
           <!-- Carte 2 : Logiciels -->
-          <article class="srv-card">
+          <article class="srv-card" data-service-id="2" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="srv-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="16 18 22 12 16 6"></polyline>
@@ -159,10 +200,14 @@
             </div>
             <h3 class="srv-card-title" data-i18n="srvCard2Title">Logiciels</h3>
             <p class="srv-card-desc" data-i18n="srvCard2Desc">Des logiciels sur mesure pour optimiser votre activité.</p>
+            <div class="srv-card-action">
+              <span data-i18n="clickToDiscover">Découvrir cette expertise</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </article>
 
           <!-- Carte 3 : Sites Web -->
-          <article class="srv-card">
+          <article class="srv-card" data-service-id="3" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="srv-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -172,10 +217,14 @@
             </div>
             <h3 class="srv-card-title" data-i18n="srvCard3Title">Sites Web</h3>
             <p class="srv-card-desc" data-i18n="srvCard3Desc">Des sites modernes, rapides et bien référencés.</p>
+            <div class="srv-card-action">
+              <span data-i18n="clickToDiscover">Découvrir cette expertise</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </article>
 
           <!-- Carte 4 : Sécurité & Caméras -->
-          <article class="srv-card">
+          <article class="srv-card" data-service-id="4" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="srv-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -183,10 +232,14 @@
             </div>
             <h3 class="srv-card-title" data-i18n="srvCard4Title">Sécurité & Caméras</h3>
             <p class="srv-card-desc" data-i18n="srvCard4Desc">Installation et configuration de systèmes de vidéosurveillance et de sécurité.</p>
+            <div class="srv-card-action">
+              <span data-i18n="clickToDiscover">Découvrir cette expertise</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </article>
 
           <!-- Carte 5 : Matériel Informatique -->
-          <article class="srv-card">
+          <article class="srv-card" data-service-id="5" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="srv-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -196,10 +249,14 @@
             </div>
             <h3 class="srv-card-title" data-i18n="srvCard5Title">Matériel Informatique</h3>
             <p class="srv-card-desc" data-i18n="srvCard5Desc">Vente et installation de tout matériel informatique (PC, composants, accessoires).</p>
+            <div class="srv-card-action">
+              <span data-i18n="clickToDiscover">Découvrir cette expertise</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </article>
 
           <!-- Carte 6 : Conseils & Support -->
-          <article class="srv-card">
+          <article class="srv-card" data-service-id="6" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="srv-card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="3"></circle>
@@ -208,6 +265,10 @@
             </div>
             <h3 class="srv-card-title" data-i18n="srvCard6Title">Conseils & Support</h3>
             <p class="srv-card-desc" data-i18n="srvCard6Desc">Un accompagnement personnalisé à chaque étape de votre projet.</p>
+            <div class="srv-card-action">
+              <span data-i18n="clickToDiscover">Découvrir cette expertise</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
           </article>
 
         </div>
@@ -226,29 +287,37 @@
         <div class="service-showcases">
 
           <!-- 1. Applications Mobiles -->
-          <article class="service-showcase-row">
+          <article id="service-row-1" class="service-showcase-row">
             <div class="showcase-content">
-              <span class="showcase-tag" data-i18n="detail1Tag">APPLICATIONS MOBILES</span>
+              <span class="showcase-tag" data-i18n="detail1Tag">APPLICATIONS MOBILES & EXPÉRIENCE DIGITALE</span>
               <h3 class="showcase-title" data-i18n="detail1Title">Applications Mobiles iOS & Android</h3>
               <p class="showcase-desc" data-i18n="detail1Desc">Des applications performantes et intuitives pour iOS et Android.</p>
+              
+              <div class="showcase-story-box">
+                <svg class="showcase-story-quote-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995-2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="showcase-story-text" data-i18n="detail1Story">À l'ère où le monde converge vers la mobilité, concevoir une application mobile ne se résume pas à aligner du code : c'est sculpter une passerelle vivante entre votre vision et vos utilisateurs. Forte de 17 années d'expérience et d'une rigueur forgée auprès de plus de 50 institutions nationales, BRAHIM INFORMATIQUE crée des applications mobiles iOS et Android qui allient une ergonomie raffinée à une réactivité instantanée.</p>
+              </div>
+
               <ul class="showcase-bullets">
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail1Bullet1">Applications sur mesure</span>
+                  <span data-i18n="detail1Bullet1">Applications sur mesure pour smartphones et tablettes</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail1Bullet2">Interfaces modernes et ergonomiques</span>
+                  <span data-i18n="detail1Bullet2">Interfaces modernes, élégantes et ergonomiques</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail1Bullet3">Mise à jour et maintenance</span>
+                  <span data-i18n="detail1Bullet3">Mises à jour régulières, maintenance et suivi continu</span>
                 </li>
               </ul>
             </div>
@@ -258,29 +327,37 @@
           </article>
 
           <!-- 2. Logiciels (Inversé) -->
-          <article class="service-showcase-row row-reversed">
+          <article id="service-row-2" class="service-showcase-row row-reversed">
             <div class="showcase-content">
-              <span class="showcase-tag" data-i18n="detail2Tag">LOGICIELS SUR MESURE</span>
+              <span class="showcase-tag" data-i18n="detail2Tag">INGÉNIERIE LOGICIELLE & SYSTÈMES MÉTIER</span>
               <h3 class="showcase-title" data-i18n="detail2Title">Logiciels de Gestion & Automatisation</h3>
               <p class="showcase-desc" data-i18n="detail2Desc">Des logiciels sur mesure pour optimiser votre activité.</p>
+              
+              <div class="showcase-story-box">
+                <svg class="showcase-story-quote-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="showcase-story-text" data-i18n="detail2Story">Chaque organisation possède son identité propre, ses flux uniques et ses exigences stratégiques. Les solutions toutes faites imposent des compromis ; notre ingénierie logicielle sur mesure libère votre plein potentiel. Depuis près de deux décennies, nous bâtissons des systèmes logiciels sur mesure pour les administrations publiques, les institutions nationales et les entreprises d'envergure.</p>
+              </div>
+
               <ul class="showcase-bullets">
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail2Bullet1">Logiciels de gestion</span>
+                  <span data-i18n="detail2Bullet1">Logiciels de gestion commerciale, stocks et facturation</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail2Bullet1">Automatisation des processus</span>
+                  <span data-i18n="detail2Bullet2">Automatisation des processus administratifs et flux de travail</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail2Bullet3">Solutions personnalisées</span>
+                  <span data-i18n="detail2Bullet3">Solutions desktop et applications métier personnalisées</span>
                 </li>
               </ul>
             </div>
@@ -290,29 +367,37 @@
           </article>
 
           <!-- 3. Sites Web -->
-          <article class="service-showcase-row">
+          <article id="service-row-3" class="service-showcase-row">
             <div class="showcase-content">
-              <span class="showcase-tag" data-i18n="detail3Tag">SITES WEB</span>
+              <span class="showcase-tag" data-i18n="detail3Tag">ARCHITECTURE WEB & PRÉSENCE DIGITALE</span>
               <h3 class="showcase-title" data-i18n="detail3Title">Sites Web Modernes & Référencement</h3>
               <p class="showcase-desc" data-i18n="detail3Desc">Des sites modernes, rapides et bien référencés.</p>
+              
+              <div class="showcase-story-box">
+                <svg class="showcase-story-quote-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="showcase-story-text" data-i18n="detail3Story">Votre site internet est votre ambassadeur permanent face au monde. Il reflète votre crédibilité, incarne vos valeurs et instaure la confiance dès la première seconde. Chez BRAHIM INFORMATIQUE, nous concevons des plateformes web qui transcendent les simples pages statiques pour devenir de véritables chefs-d'œuvre technologiques : vitesse de chargement fulgurante, conformité rigoureuse aux standards internationaux, adaptabilité totale sur mobile et desktop.</p>
+              </div>
+
               <ul class="showcase-bullets">
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail3Bullet1">Sites vitrines & e-commerce</span>
+                  <span data-i18n="detail3Bullet1">Sites vitrines institutionnels et catalogues en ligne</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail3Bullet2">Design responsive</span>
+                  <span data-i18n="detail3Bullet2">Design 100% responsive optimisé pour mobile, tablette et PC</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail3Bullet3">Référencement SEO</span>
+                  <span data-i18n="detail3Bullet3">Optimisation SEO pour un référencement naturel performant</span>
                 </li>
               </ul>
             </div>
@@ -322,29 +407,37 @@
           </article>
 
           <!-- 4. Sécurité & Caméras (Inversé) -->
-          <article class="service-showcase-row row-reversed">
+          <article id="service-row-4" class="service-showcase-row row-reversed">
             <div class="showcase-content">
-              <span class="showcase-tag" data-i18n="detail4Tag">SÉCURITÉ & CAMÉRAS</span>
+              <span class="showcase-tag" data-i18n="detail4Tag">SÉCURITÉ ÉLECTRONIQUE & SURVEILLANCE INTELLIGENTE</span>
               <h3 class="showcase-title" data-i18n="detail4Title">Sécurité & Systèmes de Vidéosurveillance</h3>
               <p class="showcase-desc" data-i18n="detail4Desc">Protégez vos locaux avec des solutions de vidéosurveillance fiables et performantes.</p>
+              
+              <div class="showcase-story-box">
+                <svg class="showcase-story-quote-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="showcase-story-text" data-i18n="detail4Story">La sécurité de vos installations stratégiques, de vos collaborateurs et de vos biens est un impératif non négociable. Notre savoir-faire s'étend au déploiement d'écosystèmes de surveillance électronique de pointe, éprouvés sur les sites sensibles et les infrastructures institutionnelles. Caméras haute fidélité (Full HD, 4K, vision nocturne avancée, détection intelligente), serveurs d'enregistrement fiabilisés et contrôle à distance sécurisé en temps réel sur smartphone et PC.</p>
+              </div>
+
               <ul class="showcase-bullets">
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail4Bullet1">Installation de caméras HD</span>
+                  <span data-i18n="detail4Bullet1">Installation de caméras haute définition (HD, 4K, vision nocturne)</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail4Bullet2">Accès à distance (mobile/PC)</span>
+                  <span data-i18n="detail4Bullet2">Accès à distance en temps réel sur smartphone, tablette et PC</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail4Bullet3">Maintenance et assistance</span>
+                  <span data-i18n="detail4Bullet3">Enregistrement sécurisé, maintenance et assistance technique</span>
                 </li>
               </ul>
             </div>
@@ -354,29 +447,37 @@
           </article>
 
           <!-- 5. Matériel Informatique -->
-          <article class="service-showcase-row">
+          <article id="service-row-5" class="service-showcase-row">
             <div class="showcase-content">
-              <span class="showcase-tag" data-i18n="detail5Tag">MATÉRIEL INFORMATIQUE</span>
+              <span class="showcase-tag" data-i18n="detail5Tag">INFRASTRUCTURE MATÉRIELLE & POSTES DE TRAVAIL</span>
               <h3 class="showcase-title" data-i18n="detail5Title">Vente & Installation de Matériel Informatique</h3>
               <p class="showcase-desc" data-i18n="detail5Desc">Vente et installation de tout le matériel informatique.</p>
+              
+              <div class="showcase-story-box">
+                <svg class="showcase-story-quote-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="showcase-story-text" data-i18n="detail5Story">Aucun logiciel puissant ne peut révéler son potentiel sans un socle matériel d'une stabilité irréprochable. Conscients des exigences de productivité des environnements professionnels et institutionnels, nous sélectionnons, assemblons et configurons des équipements informatiques aux normes les plus rigoureuses. Stations de travail haute performance pour les calculs intensifs, parcs de PC de bureau pérennes, composants d'élite et solutions d'interconnexion réseau robustes testés sous fortes contraintes.</p>
+              </div>
+
               <ul class="showcase-bullets">
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail5Bullet1">PC & ordinateurs portables</span>
+                  <span data-i18n="detail5Bullet1">PC de bureau, ordinateurs portables et stations de travail</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail5Bullet2">Composants (processeurs, cartes graphiques...)</span>
+                  <span data-i18n="detail5Bullet2">Composants de précision (processeurs, cartes graphiques, RAM, SSD)</span>
                 </li>
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                   </svg>
-                  <span data-i18n="detail5Bullet3">Périphériques et accessoires</span>
+                  <span data-i18n="detail5Bullet3">Périphériques, imprimantes, câblage et accessoires professionnels</span>
                 </li>
               </ul>
             </div>
@@ -386,11 +487,19 @@
           </article>
 
           <!-- 6. Conseils & Support (Inversé) -->
-          <article class="service-showcase-row row-reversed">
+          <article id="service-row-6" class="service-showcase-row row-reversed">
             <div class="showcase-content">
-              <span class="showcase-tag" data-i18n="detail6Tag">CONSEILS & SUPPORT</span>
+              <span class="showcase-tag" data-i18n="detail6Tag">AUDIT, CONSEIL STRATÉGIQUE & ASSISTANCE EXPERTE</span>
               <h3 class="showcase-title" data-i18n="detail6Title">Conseils Stratégiques & Support Technique</h3>
               <p class="showcase-desc" data-i18n="detail6Desc">Un accompagnement personnalisé et une assistance technique réactive à chaque étape.</p>
+              
+              <div class="showcase-story-box">
+                <svg class="showcase-story-quote-icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p class="showcase-story-text" data-i18n="detail6Story">La technologie n'est efficace que lorsqu'elle est guidée par une vision éclairée. Derrière nos 17 années d'existence et la fidélité de plus de 50 institutions étatiques et nationales, se trouve un engagement humain indéfectible : écouter, analyser, diagnostiquer et conseiller avec une impartialité absolue. Notre support technique réactif veille au grain pour désamorcer les imprévus avant qu'ils n'impactent vos opérations.</p>
+              </div>
+
               <ul class="showcase-bullets">
                 <li class="showcase-bullet-item">
                   <svg class="showcase-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -476,14 +585,9 @@
 
           <div class="about-visual-side">
             <div class="about-card-visual">
-              <svg class="about-visual-logo" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect width="44" height="44" rx="10" fill="#0585F2" fill-opacity="0.15"/>
-                <path d="M12 9H24C28.4183 9 32 12.5817 32 17C32 20.0247 30.3204 22.657 27.8703 24.0185C30.8715 25.4386 33 28.4754 33 32C33 36.4183 29.4183 40 25 40H12V9Z" fill="#0585F2"/>
-                <path d="M18 14H24C25.6569 14 27 15.3431 27 17C27 18.6569 25.6569 20 24 20H18V14Z" fill="#FFFFFF"/>
-                <path d="M18 25H25C26.6569 25 28 26.3431 28 28C28 29.6569 26.6569 31 25 31H18V25Z" fill="#FFFFFF"/>
-              </svg>
+              <img src="assets/img/logo_emblem_transparent.png" alt="Emblème BRAHIM INFORMATIQUE" class="about-visual-logo-img" width="56" height="56">
               <p class="about-visual-quote brand-name-latin">BRAHIM INFORMATIQUE</p>
-              <div class="about-visual-badge" data-i18n="aboutBadgeText">Innovation • Qualité • Confiance</div>
+              <div class="about-visual-badge" data-i18n="aboutBadgeText">17+ Ans • 50+ Institutions • Tiaret, Algérie</div>
             </div>
           </div>
 
@@ -786,6 +890,49 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           <span id="modal-email" dir="ltr" class="ltr-text">brrali14@gmail.com</span>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODALE DE PRÉSENTATION & HISTOIRE DU SERVICE ==================== -->
+  <div id="service-modal" class="service-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+    <div class="service-modal-dialog">
+      <button type="button" id="service-modal-close-btn" class="modal-close-btn" aria-label="Fermer la présentation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="service-modal-header">
+        <span id="service-modal-badge" class="service-modal-badge">APPLICATIONS MOBILES</span>
+        <h3 id="service-modal-title" class="service-modal-title">Applications Mobiles iOS & Android</h3>
+      </div>
+
+      <div class="service-modal-media">
+        <img id="service-modal-img" src="assets/img/mobile.jpg" alt="Aperçu du service" class="service-modal-img">
+      </div>
+
+      <div class="service-modal-body">
+        <div class="service-modal-story-card">
+          <div class="story-card-heading">
+            <svg class="story-sparkle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span data-i18n="serviceModalBadge">EXPERTISE & HISTOIRE DU MÉTIER</span>
+          </div>
+          <p id="service-modal-story" class="service-modal-story-text">...</p>
+        </div>
+
+        <div class="service-modal-points">
+          <ul id="service-modal-bullets" class="service-modal-bullets-list">
+            <!-- Dynamiquement généré via JS -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-modal-footer">
+        <button type="button" id="service-modal-scroll-btn" class="service-modal-action-btn">
+          <span data-i18n="serviceModalScrollTo">Consulter la fiche détaillée dans la page</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+        </button>
       </div>
     </div>
   </div>

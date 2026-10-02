@@ -487,6 +487,114 @@ ul {
 }
 
 /* --- 6. Section Services : Cartes Synthétiques --- */
+/* ==========================================================================
+   CHIFFRES CLÉS & EXPÉRIENCE (17 ANS • +50 INSTITUTIONS • TIARET)
+   ========================================================================== */
+.stats-strip {
+  background: linear-gradient(180deg, rgba(6, 13, 29, 0.96) 0%, rgba(2, 23, 44, 0.98) 100%);
+  border-block: 1px solid rgba(5, 133, 242, 0.22);
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(5, 133, 242, 0.16);
+  border-radius: var(--radius-md);
+  padding: 1.85rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(5, 133, 242, 0.45);
+  background: rgba(5, 133, 242, 0.08);
+  box-shadow: 0 12px 30px rgba(5, 133, 242, 0.18);
+}
+
+.stat-number-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-block-end: 0.5rem;
+}
+
+.stat-number {
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue-light) 60%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-feature-settings: "tnum";
+}
+
+.stat-suffix {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-blue);
+}
+
+.stat-loc-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-loc-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.stat-loc-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .stat-card {
+    padding: 1.35rem 1rem;
+  }
+  .stat-number {
+    font-size: 2.3rem;
+  }
+}
+
 .services-overview-section {
   background-color: var(--bg-light-base);
   color: var(--text-dark-body);
@@ -509,12 +617,40 @@ ul {
   align-items: center;
   text-align: center;
   transition: var(--transition-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .srv-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(5, 133, 242, 0.28);
+  border-color: rgba(5, 133, 242, 0.35);
+}
+
+.srv-card:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}
+
+.srv-card-action {
+  margin-block-start: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  transition: var(--transition-smooth);
+}
+
+.srv-card:hover .srv-card-action {
+  transform: translateX(4px);
+  color: #0366d6;
+}
+
+[dir="rtl"] .srv-card:hover .srv-card-action {
+  transform: translateX(-4px);
 }
 
 .srv-card-icon {
@@ -1830,6 +1966,212 @@ ul {
 }
 
 /* ==========================================================================
+   RÉCITS & HISTOIRES DES SERVICES (SHOWCASE STORY)
+   ========================================================================== */
+.showcase-story-box {
+  margin-block: 1.5rem;
+  padding: 1.35rem 1.6rem;
+  background: rgba(5, 133, 242, 0.08);
+  border-inline-start: 4px solid var(--accent-blue);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.showcase-story-quote-icon {
+  color: var(--accent-blue);
+  opacity: 0.85;
+  margin-block-end: 0.6rem;
+  display: block;
+}
+
+.showcase-story-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #f1f5f9;
+  font-style: normal;
+  text-align: justify;
+}
+
+[dir="rtl"] .showcase-story-text {
+  text-align: right;
+}
+
+/* ==========================================================================
+   MODALE DE PRÉSENTATION & HISTOIRE DU SERVICE (SERVICE MODAL)
+   ========================================================================== */
+.service-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 10, 22, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.service-modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.service-modal-dialog {
+  background: linear-gradient(155deg, #021a32 0%, #061021 100%);
+  border: 1px solid rgba(5, 133, 242, 0.35);
+  border-radius: var(--radius-lg);
+  max-width: 680px;
+  width: 100%;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(5, 133, 242, 0.25);
+  position: relative;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.service-modal-overlay.is-active .service-modal-dialog {
+  transform: scale(1);
+}
+
+.service-modal-header {
+  margin-block-end: 1.25rem;
+  padding-inline-end: 2.75rem;
+}
+
+.service-modal-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-blue);
+  background: rgba(5, 133, 242, 0.12);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(5, 133, 242, 0.25);
+  margin-block-end: 0.5rem;
+}
+
+.service-modal-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.service-modal-media {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(5, 133, 242, 0.2);
+  margin-block-end: 1.5rem;
+  flex-shrink: 0;
+  background: #02172c;
+}
+
+.service-modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-modal-story-card {
+  background: rgba(5, 133, 242, 0.08);
+  border: 1px solid rgba(5, 133, 242, 0.22);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.5rem;
+  margin-block-end: 1.5rem;
+}
+
+.story-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent-blue);
+  margin-block-end: 0.75rem;
+  text-transform: uppercase;
+}
+
+.story-sparkle-icon {
+  color: var(--accent-blue);
+}
+
+.service-modal-story-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #f1f5f9;
+  text-align: justify;
+}
+
+[dir="rtl"] .service-modal-story-text {
+  text-align: right;
+}
+
+.service-modal-bullets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-block-end: 1.5rem;
+}
+
+.service-modal-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.94rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.service-modal-bullet-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+  margin-block-start: 2px;
+}
+
+.service-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-block-start: 1px solid rgba(5, 133, 242, 0.15);
+  padding-block-start: 1.25rem;
+}
+
+.service-modal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-blue);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.service-modal-action-btn:hover {
+  background: #0366d6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(5, 133, 242, 0.4);
+}
+
+/* ==========================================================================
    THÈME JOUR (LIGHT MODE / مظهر نهار)
    ========================================================================== */
 [data-theme="light"] {
@@ -2070,6 +2412,76 @@ ul {
 
 [data-theme="light"] .modal-contact-item {
   color: #0f172a;
+}
+
+/* Light Mode: Chiffres clés & Expérience */
+[data-theme="light"] .stats-strip {
+  background: linear-gradient(180deg, #f8fafc 0%, #edf3fa 100%);
+  border-block-color: rgba(5, 133, 242, 0.14);
+}
+
+[data-theme="light"] .stat-card {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.16);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .stat-card:hover {
+  background: #ffffff;
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 25px rgba(5, 133, 242, 0.12);
+}
+
+[data-theme="light"] .stat-number {
+  color: #0f172a;
+  background: linear-gradient(135deg, #0f172a 0%, #0366d6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .stat-loc-name {
+  color: #0f172a;
+}
+
+[data-theme="light"] .stat-label {
+  color: #475569;
+}
+
+/* Light Mode: Stories des Services & Modale Service */
+[data-theme="light"] .showcase-story-box {
+  background: rgba(5, 133, 242, 0.06);
+  border-inline-start-color: var(--accent-blue);
+}
+
+[data-theme="light"] .showcase-story-text {
+  color: #334155;
+}
+
+[data-theme="light"] .service-modal-dialog {
+  background: #ffffff;
+  border-color: rgba(5, 133, 242, 0.25);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25), 0 0 35px rgba(5, 133, 242, 0.15);
+}
+
+[data-theme="light"] .service-modal-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .service-modal-story-card {
+  background: #f8fafc;
+  border-color: rgba(5, 133, 242, 0.15);
+}
+
+[data-theme="light"] .service-modal-story-text {
+  color: #334155;
+}
+
+[data-theme="light"] .service-modal-bullet-item {
+  color: #475569;
+}
+
+[data-theme="light"] .service-modal-footer {
+  border-block-start-color: rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================================================

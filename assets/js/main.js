@@ -87,6 +87,26 @@
     } catch (e) {
       console.warn('Impossible de sauvegarder la langue:', e);
     }
+
+    // Traduction des attributs aria-label (data-i18n-aria)
+    const ariaElements = document.querySelectorAll('[data-i18n-aria]');
+    ariaElements.forEach(function (el) {
+      const key = el.getAttribute('data-i18n-aria');
+      if (translations[lang] && translations[lang][key] !== undefined) {
+        el.setAttribute('aria-label', translations[lang][key]);
+      }
+    });
+
+    // Synchronisation de l'URL sans rechargement
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('lang')) {
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url.toString());
+      }
+    } catch (e) {
+      // Ignorer
+    }
   }
 
   // Écouteurs sur les boutons de sélection de langue
@@ -339,6 +359,141 @@
       }
     });
   }
+
+  // --- 9. Modale de Présentation des Services & Récit d'Expertise ---
+  const serviceModal = document.getElementById('service-modal');
+  const serviceModalCloseBtn = document.getElementById('service-modal-close-btn');
+  const serviceModalBadge = document.getElementById('service-modal-badge');
+  const serviceModalTitle = document.getElementById('service-modal-title');
+  const serviceModalImg = document.getElementById('service-modal-img');
+  const serviceModalStory = document.getElementById('service-modal-story');
+  const serviceModalBullets = document.getElementById('service-modal-bullets');
+  const serviceModalScrollBtn = document.getElementById('service-modal-scroll-btn');
+
+  let currentActiveServiceId = null;
+
+  const serviceImages = {
+    '1': 'assets/img/mobile.jpg',
+    '2': 'assets/img/logiciels.jpg',
+    '3': 'assets/img/web.jpg',
+    '4': 'assets/img/cameras.jpg',
+    '5': 'assets/img/materiel.jpg',
+    '6': 'assets/img/support.jpg'
+  };
+
+  function updateServiceModalContent(id) {
+    if (!serviceModal) return;
+    const currentLang = htmlEl.getAttribute('lang') || getSavedLanguage() || 'fr';
+    const dict = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : (translations ? translations.fr : null);
+    if (!dict) return;
+
+    currentActiveServiceId = id;
+
+    if (serviceModalBadge) {
+      serviceModalBadge.textContent = dict[`detail${id}Tag`] || '';
+    }
+    if (serviceModalTitle) {
+      serviceModalTitle.textContent = dict[`detail${id}Title`] || '';
+    }
+    if (serviceModalImg && serviceImages[id]) {
+      serviceModalImg.src = serviceImages[id];
+      serviceModalImg.alt = dict[`detail${id}Title`] || 'Service';
+    }
+    if (serviceModalStory) {
+      serviceModalStory.textContent = dict[`detail${id}Story`] || dict[`detail${id}Desc`] || '';
+    }
+    if (serviceModalBullets) {
+      serviceModalBullets.innerHTML = '';
+      for (let b = 1; b <= 3; b++) {
+        const bulletText = dict[`detail${id}Bullet${b}`];
+        if (bulletText) {
+          const li = document.createElement('li');
+          li.className = 'service-modal-bullet-item';
+          li.innerHTML = `
+            <svg class="service-modal-bullet-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>${bulletText}</span>
+          `;
+          serviceModalBullets.appendChild(li);
+        }
+      }
+    }
+  }
+
+  function openServiceModal(id) {
+    if (!serviceModal) return;
+    updateServiceModalContent(id);
+    serviceModal.classList.add('is-active');
+    bodyEl.style.overflow = 'hidden';
+    if (serviceModalCloseBtn) serviceModalCloseBtn.focus();
+  }
+
+  function closeServiceModal() {
+    if (!serviceModal) return;
+    serviceModal.classList.remove('is-active');
+    bodyEl.style.overflow = '';
+  }
+
+  // Écouteurs sur les 6 cartes de services
+  document.querySelectorAll('.srv-card[data-service-id]').forEach(function (card) {
+    const id = card.getAttribute('data-service-id');
+    card.addEventListener('click', function () {
+      openServiceModal(id);
+    });
+
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openServiceModal(id);
+      }
+    });
+  });
+
+  if (serviceModalCloseBtn) {
+    serviceModalCloseBtn.addEventListener('click', closeServiceModal);
+  }
+
+  if (serviceModalScrollBtn) {
+    serviceModalScrollBtn.addEventListener('click', function () {
+      const targetId = currentActiveServiceId;
+      closeServiceModal();
+      if (targetId) {
+        const targetRow = document.getElementById(`service-row-${targetId}`);
+        if (targetRow) {
+          const headerHeight = headerEl ? headerEl.offsetHeight : 70;
+          const targetPos = targetRow.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetPos,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  }
+
+  if (serviceModal) {
+    serviceModal.addEventListener('click', function (e) {
+      if (e.target === serviceModal) {
+        closeServiceModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && serviceModal.classList.contains('is-active')) {
+        closeServiceModal();
+      }
+    });
+  }
+
+  // Synchronisation de la modale active lors du changement de langue
+  const originalSetLanguage = setLanguage;
+  setLanguage = function(lang) {
+    originalSetLanguage(lang);
+    if (currentActiveServiceId && serviceModal && serviceModal.classList.contains('is-active')) {
+      updateServiceModalContent(currentActiveServiceId);
+    }
+  };
 
   console.log('BRAHIM INFORMATIQUE — Application initialisée avec succès.');
 })();
