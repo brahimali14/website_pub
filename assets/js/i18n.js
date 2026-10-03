@@ -24,6 +24,8 @@ const translations = {
     heroSubtitle: "Plus de 17 ans d'excellence technologique au service de plus de 50 institutions nationales et gouvernementales.",
     heroDescription: "Applications mobiles, logiciels de pointe, sites web de prestige, vidéosurveillance haute définition et matériel informatique certifié. Depuis Tiaret, nous accompagnons nos partenaires à l'échelle nationale de l'idée à la réalisation avec une rigueur absolue.",
     heroBadge: "Votre projet, notre expertise !",
+    heroCallDirect: "Appeler directement",
+    heroEmailDirect: "Écrivez-nous",
 
     // Chiffres Clés / Statistiques d'Excellence
     statExpNumber: "17+",
@@ -145,6 +147,8 @@ const translations = {
     memberMohamedRole: "Développement de logiciels et de sites web, installation de caméras, matériel informatique et réseaux",
     memberMohamedPhone: "0553 18 40 96",
     memberMohamedEmail: "brmed14@gmail.com",
+    callAction: "Appeler",
+    emailAction: "Email",
 
     // Informational Contact Banner
     bannerTitle: "Vous avez un projet ?",
@@ -168,6 +172,13 @@ const translations = {
     modalClose: "Fermer",
     clickToEnlarge: "Agrandir le profil",
     modalProfileTitle: "Profil & Compétences",
+    modalCallBtn: "Appeler ce numéro",
+    modalEmailBtn: "Envoyer un email",
+    bannerCallBtn: "Appeler le 0550 67 32 06",
+    bannerEmailBtn: "Nous écrire par Email",
+    dockCallTooltip: "Appeler directement",
+    dockEmailTooltip: "Envoyer un email",
+    dockBackTop: "Haut de page",
     serviceModalBadge: "EXPERTISE & HISTOIRE DU MÉTIER",
     serviceModalScrollTo: "Consulter la fiche détaillée dans la page",
     clickToDiscover: "Découvrir cette expertise"
@@ -192,6 +203,8 @@ const translations = {
     heroSubtitle: "أكثر من 17 عاماً من الريادة التكنولوجية في خدمة أكثر من 50 مؤسسة وطنية وحكومية.",
     heroDescription: "تطبيقات الهاتف الذكي، برمجيات مخصصة رائدة، بوابات ويب متطورة، أحدث أنظمة كاميرات المراقبة والعتاد المعلوماتي المعتمد. انطلاقاً من تيارت، نرافق شركاءنا عبر كافة ربوع الوطن بكل دقة واحترافية.",
     heroBadge: "مشروعكم، خبرتنا وتميزنا !",
+    heroCallDirect: "اتصال مباشر",
+    heroEmailDirect: "راسلنا عبر البريد",
 
     // Chiffres Clés / Statistiques d'Excellence
     statExpNumber: "17+",
@@ -313,6 +326,8 @@ const translations = {
     memberMohamedRole: "تطوير البرمجيات والمواقع، تركيب الكاميرات، العتاد المعلوماتي والشبكات",
     memberMohamedPhone: "0553 18 40 96",
     memberMohamedEmail: "brmed14@gmail.com",
+    callAction: "اتصال",
+    emailAction: "بريد",
 
     // Informational Contact Banner
     bannerTitle: "هل لديكم مشروع تقني ؟",
@@ -336,6 +351,13 @@ const translations = {
     modalClose: "إغلاق",
     clickToEnlarge: "تكبير الملف الشخصي",
     modalProfileTitle: "الملف الشخصي والخبرات",
+    modalCallBtn: "اتصال هاتفي الآن",
+    modalEmailBtn: "إرسال بريد إلكتروني",
+    bannerCallBtn: "اتصال مباشر : 0550 67 32 06",
+    bannerEmailBtn: "راسلنا عبر البريد الإلكتروني",
+    dockCallTooltip: "اتصال مباشر",
+    dockEmailTooltip: "مراسلة فورية",
+    dockBackTop: "للأعلى",
     serviceModalBadge: "الخبرة والتميز التكنولوجي",
     serviceModalScrollTo: "عرض التفاصيل الكاملة في الصفحة",
     clickToDiscover: "اكتشف هذه الخدمة"

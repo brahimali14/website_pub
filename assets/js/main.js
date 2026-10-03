@@ -313,8 +313,10 @@
   const modalAvatarImg = document.getElementById('modal-avatar-img');
   const modalName = document.getElementById('modal-name');
   const modalRole = document.getElementById('modal-role');
-  const modalPhone = document.getElementById('modal-phone');
-  const modalEmail = document.getElementById('modal-email');
+  const modalPhoneLink = document.getElementById('modal-phone-link');
+  const modalPhoneNumber = document.getElementById('modal-phone-number');
+  const modalEmailLink = document.getElementById('modal-email-link');
+  const modalEmailAddress = document.getElementById('modal-email-address');
 
   function openProfileModal(card) {
     if (!profileModal) return;
@@ -322,8 +324,8 @@
     const avatarImg = card.querySelector('.team-avatar-img');
     const nameEl = card.querySelector('.team-name');
     const roleEl = card.querySelector('.team-role-text');
-    const phoneEl = card.querySelector('.team-contact-item:first-child .ltr-text');
-    const emailEl = card.querySelector('.team-contact-item:last-child .ltr-text');
+    const phoneEl = card.querySelector('.phone-link .ltr-text') || card.querySelector('.team-contact-item:first-child .ltr-text') || card.querySelector('[data-i18n*="Phone"]');
+    const emailEl = card.querySelector('.email-link .ltr-text') || card.querySelector('.team-contact-item:last-child .ltr-text') || card.querySelector('[data-i18n*="Email"]');
 
     if (modalAvatarImg && avatarImg) {
       modalAvatarImg.src = avatarImg.currentSrc || avatarImg.src;
@@ -335,11 +337,16 @@
     if (modalRole && roleEl) {
       modalRole.textContent = roleEl.textContent;
     }
-    if (modalPhone && phoneEl) {
-      modalPhone.textContent = phoneEl.textContent;
+    if (phoneEl) {
+      const pVal = phoneEl.textContent.trim();
+      const cleanPhone = pVal.replace(/\s+/g, '');
+      if (modalPhoneNumber) modalPhoneNumber.textContent = pVal;
+      if (modalPhoneLink) modalPhoneLink.setAttribute('href', 'tel:' + cleanPhone);
     }
-    if (modalEmail && emailEl) {
-      modalEmail.textContent = emailEl.textContent;
+    if (emailEl) {
+      const eVal = emailEl.textContent.trim();
+      if (modalEmailAddress) modalEmailAddress.textContent = eVal;
+      if (modalEmailLink) modalEmailLink.setAttribute('href', 'mailto:' + eVal);
     }
 
     profileModal.classList.add('is-active');
@@ -358,17 +365,39 @@
     card.setAttribute('role', 'button');
     card.setAttribute('aria-haspopup', 'dialog');
 
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.team-contact-link') || e.target.closest('a[href^="tel:"], a[href^="mailto:"]')) {
+        return;
+      }
       openProfileModal(this);
     });
 
     card.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('.team-contact-link') || e.target.closest('a[href^="tel:"], a[href^="mailto:"]')) {
+          return;
+        }
         e.preventDefault();
         openProfileModal(this);
       }
     });
   });
+
+  // Éviter que les clics sur les liens de contact ne déclenchent d'autres écouteurs
+  document.querySelectorAll('.team-contact-link, a[href^="tel:"], a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  });
+
+  // Gestion du retour en haut pour le widget dock flottant
+  const dockTopBtn = document.getElementById('dock-top-btn');
+  if (dockTopBtn) {
+    dockTopBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   if (modalCloseBtn) {
     modalCloseBtn.addEventListener('click', closeProfileModal);
